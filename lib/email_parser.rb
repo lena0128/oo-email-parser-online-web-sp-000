@@ -15,6 +15,8 @@ def parse
 # The + tells to treat multiple spaces between emails as a single separator
 parsed_emails = @email_addresses.split(/[,\s]+/)
 
+parsed_emails.delete_if { |email| email == email}
+
 end
 
 end
