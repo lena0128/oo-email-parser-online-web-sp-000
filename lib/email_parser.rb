@@ -13,9 +13,7 @@ end
 def parse
 # The [] bracket notation says to match any characer in the setter
 # The + tells to treat multiple spaces between emails as a single separator
-parsed_emails = @email_addresses.split(/[,\s]+/)
-
-parsed_emails.delete_if { |email| email == email}
+parsed_emails = @email_addresses.split(/[,\s]+/).uniq
 
 end
 
